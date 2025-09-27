@@ -27,6 +27,6 @@ async fn main() {
             .service(favicon)
             .service(read_page)
     })
-        .bind("127.0.0.1:8080").unwrap()
+        .bind("0.0.0.0").unwrap()
         .run().await.unwrap();
 }
