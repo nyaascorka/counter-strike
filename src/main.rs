@@ -14,7 +14,7 @@ async fn read_page() -> impl Responder {
 }
 #[actix_web::get("/favicon.ico")]
 async fn favicon() -> impl Responder {
-    HttpResponse::Ok().content_type("text/html; charset=utf-32").body(
+    HttpResponse::Ok().body(
         ::std::fs::read("public/img/favicon.ico").unwrap()
     )
 }
