@@ -18,7 +18,6 @@ async fn favicon() -> impl Responder {
         ::std::fs::read("public/img/favicon.ico").unwrap()
     )
 }
-
 #[actix_web::main]
 async fn main() {
     use actix_web::{App, HttpServer};
