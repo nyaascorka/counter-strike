@@ -1,0 +1,12 @@
+:root {
+    font: 14px/1.25 SegoeUI, "Segoe UI", Helvetica, Arial, sans-serif;
+    text-align: justify;
+    color-scheme: dark;
+}
+
+button {
+    font-family: inherit;
+    background: light-dark(#eee, #222);
+    border: none;
+    cursor: pointer;
+}

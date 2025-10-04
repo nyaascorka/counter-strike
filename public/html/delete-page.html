@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Path</title>
+        <meta charset='utf-8'/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <main>
+            <h1>Edit page</h1>
+            <article>
+                <p>
+                    {% if content is defined %}
+                        The page already exists, so you can edit its version given below:
+                    {% else %}
+                        The page hasn't been created, so you can do it right now (^^):
+                    {% endif %}
+                </p>
+                <form action="?page-created-edited" method="post">
+                    <textarea>{{content}}</textarea>
+                    <button>
+                        {% if content is defined %} Edit
+                        {% else %} Create
+                        {% endif %}
+                    </button>
+                </form>
+            </article>
+        </main>
+    </body>
+</html>

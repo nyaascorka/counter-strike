@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Path</title>
+
+        <meta charset='utf-8'/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="/public/img/favicon.ico">
+        <style>
+            @import "/public/css/index.css";
+            @import "/public/css/form.css";
+        </style>
+    </head>
+    <body>
+        <h1>Create page</h1>
+        <main>
+            <p>The page hasn't been created, so you can do it right now (^^):</p>
+            <form method="post" id="create-edit-page">
+                <fieldset class="article">
+                    <legend>Article</legend>
+                    <p>If leave the title empty, then it will be treated as equal to the URL without an initial slash.</p>
+                    <label>
+                        <span>Title</span>
+                        <input type="text" name="title">
+                    </label>
+                    <label>
+                        <span>Content</span>
+                        <textarea class="content" name="content"></textarea>
+                    </label>
+                </fieldset>
+                <fieldset class="pws">
+                    <p>Lack of a password next to the correspondent field results in making every user able to do the correspondent action once the page has been created.</p>
+                    <legend>Passwords</legend>
+                    <label>
+                        <span>To edit more</span>
+                        <input class="pw" name="pw_for_edit" type="password">
+                    </label>
+                    <label>
+                        <span>To read logs</span>
+                        <input class="pw" name="pw_for_logs" type="password">
+                    </label>
+                    <label>
+                        <span>To delete the page</span>
+                        <input class="pw" name="pw_for_deletion" type="password">
+                    </label>
+                    <label class="enforce-match">
+                        <span>Same for all</span>
+                        <input class="enforce-match" type="checkbox" checked>
+                    </label>
+                </fieldset>
+                <button class="submit" type="submit">Edit</button>
+            </form>
+        </main>
+        <script src="/public/js/form-to-create.js"></script>
+    </body>
+</html>

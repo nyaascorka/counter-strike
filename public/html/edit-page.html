@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Path</title>
+
+        <meta charset='utf-8'/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="/public/img/favicon.ico">
+        <style>
+            @import "/public/css/index.css";
+            @import "/public/css/form.css";
+        </style>
+    </head>
+    <body>
+        <h1>Edit page</h1>
+        <main>
+            <p>The page exists, so you can edit right now (^^):</p>
+            <form method="post" id="create-edit-page">
+                <fieldset class="article">
+                    <legend>Article</legend>
+                    <label>
+                        <span>Title</span>
+                        <input type="text" name="title" value="{{title}}">
+                    </label>
+                    <label>
+                        <span>Content</span>
+                        <textarea class="content" name="content">{{- content -}}</textarea>
+                    </label>
+                </fieldset>
+                <fieldset class="pws">
+                    <legend>Password</legend>
+                    <label>
+                        <span>To edit more</span>
+                        <input class="pw" name="pw_for_edit" type="password">
+                    </label>
+                </fieldset>
+                <button class="submit" type="submit">Edit</button>
+            </form>
+        </main>
+        <script src="/public/js/form-to-edit.js"></script>
+    </body>
+</html>

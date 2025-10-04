@@ -1,11 +1,21 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <title>Path</title>
+        <title>{{title}}</title>
         <meta charset='utf-8'/>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="/public/img/favicon.ico">
     </head>
     <body>
-        Hello everybody, I am Iscra! Call me Iscra-san or Iscra-chan. :)
+        <h1>
+            {%- if title is defined -%} {{- title -}} {%- endif -%}
+        </h1>
+        <main>
+            {%- if content is defined -%}
+            {{- content -}}
+            {%- else -%}
+            404
+            {%- endif -%}
+        </main>
     </body>
 </html>

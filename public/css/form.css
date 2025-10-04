@@ -1,0 +1,44 @@
+/*
+# NOT WHILE DEBUGGING BECAUSE THE FILE GETS CACHED:
+* @import url("/public/css/index.css");
+*/
+
+form#create-edit-page {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+
+    > fieldset {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        gap: .6rem;
+        > label {
+            align-self: stretch;
+        }
+        > label.enforce-match {
+            align-self: center;
+        }
+
+        > label {
+            display: flex;
+            gap: .2rem;
+            flex-direction: column;
+            &.enforce-match {
+                flex-direction: row;
+                justify-content: center;
+            }
+        }
+    }
+    > button.submit {
+        text-align: center;
+    }
+
+    > legend {
+        font-size: 1.2rem;
+    }
+    p, [type=checkbox] {
+        margin: 0;
+    }
+}
